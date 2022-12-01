@@ -1,1 +1,1 @@
-web:gunicorn himilo:
+gunicorn main:app
