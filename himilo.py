@@ -171,5 +171,6 @@ def render_page_content(pathname):
     )
 
 
-if __name__=='__main__':
-    app.run_server(debug=True, port=3000)
+app.run(host='0.0.0.0')
+
+server = app.server
