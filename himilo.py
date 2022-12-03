@@ -10,7 +10,7 @@ import pandas as pd
 # data owner: Chubak Bidpaa
 df = pd.read_csv('data.csv')
 
-pp = dash.Dash(
+app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP],
     meta_tags=[
         {"name": "viewport", "content": "width=device-width, initial-scale=1"}
