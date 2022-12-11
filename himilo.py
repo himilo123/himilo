@@ -54,20 +54,20 @@ CONTENT_STYLE2 = {
 
 sidebar1 = html.Div(
     [
-        html.H6("Himilo Solutions  ", className="display-12"),
+        html.H6("Himilo Solutions  ", className="display-12",xs=12, sm=12, md=12, lg=4, xl=4),
 
-        html.H6("himilo@hotmail.com", className="display-12"),
+        html.H6("himilo@hotmail.com", className="display-12",xs=12, sm=12, md=12, lg=4, xl=4),
 
-        html.H6("+252634220384", className="display-12"),
+        html.H6("+252634220384", className="display-12",xs=12, sm=12, md=12, lg=4, xl=4),
         html.Hr(),
         html.P(
-            "Eelections in Udub Era ", className="lead"
+            "Eelections in Udub Era ", className="lead",xs=12, sm=12, md=12, lg=4, xl=4
         ),
         dbc.Nav(
             [
-                dbc.NavLink("2003_Presidential_Elections", href="/", active="exact"),
-                dbc.NavLink("2005_Parliamentary_Elections", href="/page-1", active="exact"),
-                dbc.NavLink("2010_Presidential_Elections", href="/page-2", active="exact"),
+                dbc.NavLink("2003_Presidential_Elections", href="/", active="exact",xs=12, sm=12, md=12, lg=4, xl=4),
+                dbc.NavLink("2005_Parliamentary_Elections", href="/page-1", active="exact",xs=12, sm=12, md=12, lg=4, xl=4),
+                dbc.NavLink("2010_Presidential_Elections", href="/page-2", active="exact",xs=12, sm=12, md=12, lg=4, xl=4),
 
             ],
             vertical=True,
@@ -78,19 +78,19 @@ sidebar1 = html.Div(
 )
 sidebar2 = html.Div(
     [
-        html.H6("Himilo Solutions  ", className="display-12"),
+        html.H6("Himilo Solutions  ", className="display-12",xs=12, sm=12, md=12, lg=4, xl=4),
 
-        html.H6("himilo@hotmail.com", className="display-12"),
+        html.H6("himilo@hotmail.com", className="display-12",xs=12, sm=12, md=12, lg=4, xl=4),
 
-        html.H6("+252634220384", className="display-12"),
+        html.H6("+252634220384", className="display-12",xs=12, sm=12, md=12, lg=4, xl=4),
         html.Hr(),
         html.P(
-            "Eelections in Wadani Era", className="lead"
+            "Eelections in Wadani Era", className="lead",xs=12, sm=12, md=12, lg=4, xl=4
         ),
         dbc.Nav(
             [
-                dbc.NavLink("2017_Presidential_Elections", href="/page-3", active="exact"),
-                dbc.NavLink("2021_Parliamentary_Elections", href="/page-4", active="exact"),
+                dbc.NavLink("2017_Presidential_Elections", href="/page-3", active="exact",xs=12, sm=12, md=12, lg=4, xl=4),
+                dbc.NavLink("2021_Parliamentary_Elections", href="/page-4", active="exact",xs=12, sm=12, md=12, lg=4, xl=4),
 
             ],
             vertical=True,
@@ -100,7 +100,7 @@ sidebar2 = html.Div(
     style=SIDEBAR_STYLE2,
 )
 
-content = html.Div(id="page-content", children=[], style=CONTENT_STYLE1)
+content = html.Div(id="page-content", children=[], style=CONTENT_STYLE1,xs=12, sm=12, md=12, lg=4, xl=4)
 
 app.layout = html.Div([
     dcc.Location(id="url"),
