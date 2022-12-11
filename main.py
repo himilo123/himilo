@@ -10,7 +10,13 @@ import pandas as pd
 # data owner: Chubak Bidpaa
 df = pd.read_csv('sm.csv')
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(
+    external_stylesheets=[dbc.themes.BOOTSTRAP],
+    meta_tags=[
+        {"name": "viewport",
+         "content": "width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=0.5"}
+    ],
+)
 
 
 # styling the sidebar
@@ -70,10 +76,8 @@ app.layout = html.Div([
 def render_page_content(pathname):
     if pathname == "/":
         return [
-                html.H1('Social Media ',
-                        style={'textAlign':'center'}),
-                dcc.Graph(id='bargraph',
-                         figure=px.bar(df, barmode='group', x='Publish-time',
+                html.H1('Social Media ',style={'textAlign':'center'},xs=12, sm=12, md=12, lg=4, xl=4),
+                dcc.Graph(id='bargraph',figure=px.bar(df, barmode='group', x='Publish-time',
                          y='Impressions',color='Description'))
                 ]
     elif pathname == "/page-1":
